@@ -1,7 +1,1 @@
-export default function Home() {
-  return (
-    <main>
-      <h1>Boilerplate</h1>
-    </main>
-  );
-}
+export { Home as default } from '@/src/pages/home';
