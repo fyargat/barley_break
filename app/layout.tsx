@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-import '@/styles/index.scss';
+import { App } from '@/src/app/app';
 
 export const metadata: Metadata = {
-  title: 'Boilerplate',
-  description: 'Boilerplate',
+  title: 'Barley Break',
+  description: 'Description',
 };
 
 export default function RootLayout({
@@ -14,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <App>{children}</App>
+      </body>
     </html>
   );
 }
