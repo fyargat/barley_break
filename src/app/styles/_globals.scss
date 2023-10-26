@@ -1,5 +1,40 @@
-:root,
-::before,
-::after {
+@import '@/src/shared/styles/mixins';
+
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  @include breakpoint(mobile) {
+    font-size: 16px;
+  }
+
+  overflow: hidden;
+
+  font:
+    14px/1.2 Montserrat,
+    sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: var(--color-primary);
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
 }

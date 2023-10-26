@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
 
-import { App } from '@/src/app/app';
+import { App } from '@/src/app';
+
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '500'] });
 
 export const metadata: Metadata = {
   title: 'Barley Break',
@@ -14,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>
+      <body className={montserrat.className}>
         <App>{children}</App>
       </body>
     </html>
